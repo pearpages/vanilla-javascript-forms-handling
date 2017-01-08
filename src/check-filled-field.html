@@ -1,0 +1,30 @@
+<html>
+
+<head></head>
+
+<body>
+    <form action="javascript:void(0)" name="form-1" onsubmit="return validateForm()">
+        <div><label for="">First Name: <input name="first-name" type="text"></label></div>
+        <div><label for="">Last Name: <input name="last-name" type="text"></label></div>
+        <button>Submit</button>
+    </form>
+
+    <form action="">
+        <div><label for="">First Name: <input name="first-name" type="text"></label></div>
+        <div><label for="">Last Name: <input name="last-name" type="text"></label></div>
+    </form>
+</body>
+
+<script>
+function validateForm() {
+    var x = document.forms["form-1"]["first-name"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    alert("success");
+    return true;
+}
+</script>
+
+</html>
