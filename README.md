@@ -80,3 +80,29 @@ if (isNaN(x) || x < 1 || x > 10) {
 * checkValidity()
 * setCustomValidity()
 
+#### Constraint Validation DOM Properties
+
+* validity
+* validationMessage
+* willValidate
+
+```javascript
+<html>
+<head></head>
+<body>
+<input id="my-number" name="my-number" type="number" min="100" max="300" required>
+<button onclick="myFunction()">OK</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var inpObj = document.getElementById("my-number");
+    if (inpObj.checkValidity() == false) {
+        document.getElementById("demo").innerHTML = inpObj.validationMessage;
+    }
+}
+</script>
+</body>
+</html>
+```

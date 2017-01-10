@@ -1,14 +1,14 @@
 <html>
 <head></head>
 <body>
-<input id="id1" type="number" min="100" max="300" required>
+<input id="my-number" name="my-number" type="number" min="100" max="300" required>
 <button onclick="myFunction()">OK</button>
 
 <p id="demo"></p>
 
 <script>
 function myFunction() {
-    var inpObj = document.getElementById("id1");
+    var inpObj = document.getElementById("my-number");
     if (inpObj.checkValidity() == false) {
         document.getElementById("demo").innerHTML = inpObj.validationMessage;
     }
