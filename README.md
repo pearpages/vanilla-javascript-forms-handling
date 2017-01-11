@@ -80,12 +80,6 @@ if (isNaN(x) || x < 1 || x > 10) {
 * checkValidity()
 * setCustomValidity()
 
-#### Constraint Validation DOM Properties
-
-* validity
-* validationMessage
-* willValidate
-
 ```javascript
 <html>
 <head></head>
@@ -105,4 +99,36 @@ function myFunction() {
 </script>
 </body>
 </html>
+```
+
+#### Constraint Validation DOM Properties
+
+* validity
+  + customError
+  + patternMismatch
+  + rangeOverflow
+  + rangeUnderflow
+  + stepMismatch
+  + tooLong
+  + typeMismatch
+  + valueMissing
+  + valid
+* validationMessage
+* willValidate
+
+```javascript
+<input id="id1" type="number" max="100">
+<button onclick="myFunction()">OK</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var txt = "";
+    if (document.getElementById("id1").validity.rangeOverflow) {
+       txt = "Value too large";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
 ```
